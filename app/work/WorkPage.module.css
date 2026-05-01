@@ -1,0 +1,249 @@
+.pageContainer {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.badge {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 0.6rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 10rem 0 6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111827;
+  letter-spacing: -0.04em;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.subtext {
+  font-size: 1.4rem;
+  color: #4b5563;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+/* Studies Grid */
+.studiesSection {
+  padding: 4rem 0 10rem;
+}
+
+.studiesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.studyCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.4;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.studyImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.viewBtn {
+  background: #ffffff;
+  color: #111827;
+  padding: 1.25rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.studyCard:hover .studyImage {
+  transform: scale(1.05);
+}
+
+.studyCard:hover .overlay {
+  opacity: 1;
+}
+
+.studyCard:hover .viewBtn {
+  transform: translateY(0);
+}
+
+.studyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tagList {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  background: #f9fafb;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+}
+
+.brandTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 0.5rem;
+}
+
+.studyType {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #6b7280;
+  max-width: 500px;
+}
+
+/* Final CTA */
+.finalCta {
+  padding-bottom: 10rem;
+}
+
+.glassBox {
+  background: rgba(17, 24, 39, 0.98);
+  padding: 6rem;
+  border-radius: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  color: #ffffff;
+}
+
+.finalTitle {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.finalText {
+  font-size: 1.3rem;
+  max-width: 600px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ctaButton {
+  background: #ffffff;
+  color: #111827;
+  padding: 1.25rem 3rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1000px) {
+  .studiesGrid {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+  
+  .studyCard {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .tagList {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 6rem 0 4rem;
+  }
+  
+  .headline {
+    font-size: 2.5rem;
+  }
+  
+  .brandTitle {
+    font-size: 1.75rem;
+  }
+  
+  .glassBox {
+    padding: 4rem 2rem;
+    border-radius: 40px;
+  }
+}

@@ -1,0 +1,319 @@
+.pageContainer {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.badge {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 0.6rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 10rem 0 6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111827;
+  letter-spacing: -0.04em;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+}
+
+.subtext {
+  font-size: 1.4rem;
+  color: #4b5563;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+/* Detailed Services */
+.detailedServices {
+  padding: 6rem 0;
+}
+
+.serviceRow {
+  display: flex;
+  gap: 6rem;
+  padding: 8rem 0;
+  border-top: 1px solid #f3f4f6;
+  align-items: flex-start;
+}
+
+.serviceContent {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.serviceHeading {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.serviceIntro {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.miniLabel {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.whoText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.ctaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.pricingInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  color: #6b7280;
+}
+
+.pricingInfo strong {
+  color: #111827;
+}
+
+.serviceCta {
+  background: #111827;
+  color: #ffffff;
+  padding: 1.2rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.serviceCta:hover {
+  background: #000000;
+  transform: translateY(-3px);
+}
+
+.getSection {
+  flex: 0.8;
+}
+
+.glassList {
+  background: rgba(17, 24, 39, 0.98);
+  padding: 4rem;
+  border-radius: 40px;
+  color: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.getLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.listItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.check {
+  color: #ffffff;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* Process Section */
+.processSection {
+  padding: 10rem 0;
+  background-color: #f9fafb;
+}
+
+.processHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.processHeading {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.processCard {
+  background: #ffffff;
+  padding: 3.5rem;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.processCard:hover {
+  transform: translateY(-10px);
+  border-color: #111827;
+}
+
+.processIcon {
+  width: 70px;
+  height: 70px;
+  background: #111827;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepLabel {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.stepBody {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Final CTA */
+.finalCta {
+  padding: 8rem 0;
+}
+
+.finalGlassCard {
+  background: rgba(17, 24, 39, 0.98);
+  padding: 6rem;
+  border-radius: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  color: #ffffff;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+}
+
+.finalHeading {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.finalBody {
+  font-size: 1.3rem;
+  max-width: 700px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.finalButton {
+  background: #ffffff;
+  color: #111827;
+  padding: 1.25rem 3rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.finalButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1100px) {
+  .serviceRow {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .getSection {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 0 4rem;
+  }
+  
+  .headline {
+    font-size: 2.5rem;
+  }
+  
+  .subtext {
+    font-size: 1.1rem;
+  }
+  
+  .finalGlassCard {
+    padding: 4rem 2rem;
+    border-radius: 40px;
+  }
+}

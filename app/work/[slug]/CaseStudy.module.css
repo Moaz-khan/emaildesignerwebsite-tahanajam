@@ -1,0 +1,276 @@
+.pageContainer {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.badge {
+  background: #f3f4f6;
+  color: #111827;
+  padding: 0.6rem 1.4rem;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+/* Hero */
+.hero {
+  padding: 10rem 0 4rem;
+  text-align: center;
+}
+
+.brandName {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: 4rem;
+}
+
+.metaGrid {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem 0;
+  border-top: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metaLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+}
+
+.metaValue {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* Image */
+.imageSection {
+  padding: 4rem 0;
+}
+
+.mainImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.8;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.mainImage {
+  object-fit: cover;
+}
+
+/* Content */
+.contentSection {
+  padding: 6rem 0 10rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 8rem;
+  align-items: flex-start;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.approachList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.approachStep {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.stepLabel {
+  font-weight: 800;
+  color: #111827;
+  flex-shrink: 0;
+}
+
+.stepText {
+  color: #4b5563;
+}
+
+.mt4 { margin-top: 2rem; }
+
+/* Right Column */
+.rightCol {
+  position: sticky;
+  top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.glassBox {
+  background: rgba(17, 24, 39, 0.98);
+  padding: 3.5rem;
+  border-radius: 40px;
+  color: #ffffff;
+}
+
+.sidebarTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.deliverablesList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.deliverableItem {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.resultBox {
+  background: #f9fafb;
+  padding: 3.5rem;
+  border-radius: 40px;
+  border: 1px solid #f3f4f6;
+}
+
+.resultText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* Final CTA */
+.finalCta {
+  padding-bottom: 10rem;
+}
+
+.ctaCard {
+  background: #111827;
+  padding: 6rem;
+  border-radius: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.ctaHeading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+}
+
+.ctaButton {
+  background: #ffffff;
+  color: #111827;
+  padding: 1.25rem 3.5rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .rightCol {
+    position: static;
+  }
+  
+  .metaGrid {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+  
+  .brandName {
+    font-size: 3rem;
+  }
+  
+  .glassBox, .resultBox {
+    padding: 2.5rem;
+    border-radius: 30px;
+  }
+  
+  .ctaCard {
+    padding: 4rem 2rem;
+    border-radius: 40px;
+  }
+}

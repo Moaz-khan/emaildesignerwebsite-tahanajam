@@ -1,0 +1,222 @@
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: white;
+}
+
+.ctaContainer {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1300px;
+  gap: 6rem;
+}
+
+.leftCol {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.rightCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #111827;
+}
+
+.subheadingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subheading {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #4b5563;
+  max-width: 550px;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.cardSliderContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.cardsWrapper {
+  position: relative;
+  width: 520px; /* Increased width again */
+  height: 380px;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  cursor: grab;
+  transform-origin: center bottom;
+  overflow: hidden;
+}
+
+.cardImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f3f4f6;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .img {
+  transform: scale(1.05);
+}
+
+.achievements {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.achievementItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.achIcon {
+  color: #111827;
+  margin-bottom: 0.25rem;
+  opacity: 0.8;
+}
+
+.achievementItem:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1.25rem;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: #e5e7eb;
+}
+
+.achNum {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.achLabel {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #6b7280;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.primaryCta {
+  background: #111827;
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primaryCta:hover {
+  background: #000000;
+  transform: translateY(-2px);
+}
+
+.secondaryCta {
+  background: transparent;
+  color: #111827;
+  padding: 0.9rem 2rem;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.secondaryCta:hover {
+  background: #f9fafb;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .cardsWrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+}
