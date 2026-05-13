@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import Image from "next/image";
 import "./InfiniteMovingImages.css";
 
 interface ImageItem {
@@ -14,7 +13,6 @@ interface InfiniteMovingImagesProps {
   images: ImageItem[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
-  pauseOnHover?: boolean;
   className?: string;
 }
 
@@ -22,7 +20,6 @@ export const InfiniteMovingImages = ({
   images,
   direction = "left",
   speed = "normal",
-  pauseOnHover = true,
   className,
 }: InfiniteMovingImagesProps) => {
   const containerRef = useRef<HTMLDivElement>(null);

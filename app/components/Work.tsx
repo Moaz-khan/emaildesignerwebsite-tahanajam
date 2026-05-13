@@ -37,7 +37,6 @@ const Work = () => {
           images={workImages}
           direction="left"
           speed="normal"
-          pauseOnHover={true}
         />
       </div>
     </section>
@@ -45,11 +44,4 @@ const Work = () => {
 };
 
 export default Work;
-
-// Declaration for window.gsap
-declare global {
-  interface Window {
-    gsap: any;
-  }
-}
 
