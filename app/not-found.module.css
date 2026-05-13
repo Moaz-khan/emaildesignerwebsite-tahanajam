@@ -1,0 +1,68 @@
+.container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+.content {
+  text-align: center;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.errorCode {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(6rem, 15vw, 10rem);
+  line-height: 1;
+  font-weight: 900;
+  color: #FE6604;
+  opacity: 0.1;
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #1E1E1E;
+  margin: -3rem 0 0 0; /* Pull up into the transparent 404 */
+}
+
+.message {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.homeBtn {
+  margin-top: 1rem;
+  background: #1E1E1E;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.homeBtn:hover {
+  background: #FE6604;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(254, 102, 4, 0.2);
+}
+
+@media (max-width: 768px) {
+  .errorCode {
+    margin-bottom: 1rem;
+  }
+  .title {
+    margin-top: 0;
+  }
+}

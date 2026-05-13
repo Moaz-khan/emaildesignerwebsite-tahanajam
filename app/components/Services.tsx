@@ -6,47 +6,45 @@ import styles from './Services.module.css';
 const services = [
   {
     id: 1,
-    title: 'Email Template Design',
-    iconLabel: 'Template Design',
-    description: 'Custom email templates built to match your brand exactly. Every template is dark-mode ready, mobile-optimised, and tested across major email clients — so it looks right everywhere it lands.',
+    label: 'High-quality Campaigns Design',
+    title: 'Campaign Email Design',
+    description: 'High-quality, on-brand campaign emails for product launches, promotions, newsletters, seasonal sales, and retention campaigns. Each email is designed with clean structure, strong hierarchy, mobile-first layouts, and clear CTA placement.',
     included: [
-      'Figma-based templates',
-      'Dark mode optimisation',
-      'Mobile-first responsive design',
-      'Up to 2 revision rounds'
-    ],
-    icon: 'https://cdn.lordicon.com/fikcyfpp.json',
-    trigger: 'loop',
+      'Custom campaign email design in Figma',
+      'Mobile-first responsive layout',
+      'Dark mode friendly design',
+      'Klaviyo build and setup'
+    ]
   },
   {
     id: 2,
-    title: 'Email Design System',
-    iconLabel: 'Design System',
-    description: 'Stop rebuilding your emails from scratch every time. I design a master email system — a complete set of modular components in Figma — so your team can build any email in minutes without losing brand consistency.',
+    label: 'Flows',
+    title: 'Klaviyo Flow Design & Build',
+    description: 'Complete Klaviyo flow design and build for automated customer journeys. I design flows that feel natural, on-brand, and conversion-focused, from first signup to repeat purchase.',
     included: [
-      'Master template architecture in Figma',
-      'Modular component library (headers, CTAs, product blocks, footers)',
-      'Brand typography, colour, and spacing tokens',
-      'Documentation for your team',
-      'Handoff-ready for developers or direct use in Klaviyo'
-    ],
-    icon: 'https://cdn.lordicon.com/jectmwqf.json',
-    trigger: 'loop',
+      'Welcome flow design and build',
+      'Abandoned cart and checkout flows',
+      'Post-purchase email flows',
+      'Win-back and retention flows',
+      'Browse abandonment and product follow-up emails',
+      'Klaviyo setup and publishing',
+      'Mobile and dark mode testing'
+    ]
   },
   {
     id: 3,
-    title: 'Klaviyo Flow & Campaign Design',
-    iconLabel: 'Flow Design',
-    description: 'Full email sequence design — from welcome flows to post-purchase and win-back series. I handle the design, structure, and layout so every email in the flow looks intentional and on-brand.',
+    label: 'Systems',
+    title: 'Email Design System',
+    description: 'A reusable email design system built in Figma, so your brand can create consistent emails faster without starting from scratch every time. Perfect for teams that need speed, consistency, and better creative direction.',
     included: [
-      'Welcome flow design (3–5 emails)',
-      'Abandon cart, post-purchase, and win-back flows',
-      'Campaign email design for product launches and promotions',
-      'Set up and publishing in Klaviyo',
-      'A/B testing recommendations'
-    ],
-    icon: 'https://cdn.lordicon.com/xzzsrucp.json',
-    trigger: 'loop',
+      'Master email template in Figma',
+      'Reusable modular email sections',
+      'Headers, footers, CTAs, product blocks, banners, and review sections',
+      'Brand typography, colour, spacing, and layout rules',
+      'Mobile and dark mode considerations',
+      'Simple usage guide for your team',
+      'Ready for Klaviyo or developer handoff'
+    ]
   }
 ];
 
@@ -63,10 +61,13 @@ const Services = () => {
         <div className={styles.leftCol}>
           <div className={styles.header}>
             <span className={styles.badge}>What I do</span>
-            <h2 className={styles.title}>Three services. One obsession — email design.</h2>
+            <h2 className={styles.title}>
+              <span className={styles.premium}>One service.</span><br />
+              Done better than anyone else.
+            </h2>
             <p className={styles.subtitle}>
-              I don't do everything. I do email. That focus means you get a designer who
-              understands every detail of the inbox — technically, strategically, and visually.
+              Email template design, design systems, and Klaviyo flows. That's it.
+              Four years of doing nothing else means the quality shows up in every pixel.
             </p>
           </div>
 
@@ -75,7 +76,7 @@ const Services = () => {
               <button className={styles.arrowBtn} onClick={prev} aria-label="Previous">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
               </button>
-              
+
               <div className={styles.pagination}>
                 {services.map((_, i) => (
                   <button
@@ -106,16 +107,7 @@ const Services = () => {
                 className={styles.serviceCard}
               >
                 <div className={styles.cardHeader}>
-                  <div className={styles.iconBox}>
-                    {/* @ts-ignore */}
-                    <lord-icon
-                      src={services[index].icon}
-                      trigger={services[index].trigger}
-                      colors="primary:#ffffff,secondary:#ffffff"
-                      style={{ width: '60px', height: '60px' }}>
-                    </lord-icon>
-                  </div>
-                  <span className={styles.iconLabel}>{services[index].iconLabel}</span>
+                  <span className={styles.label}>{services[index].label}</span>
                 </div>
 
                 <h3 className={styles.serviceTitle}>{services[index].title}</h3>
@@ -126,7 +118,7 @@ const Services = () => {
                   <ul className={styles.includedList}>
                     {services[index].included.map((item, i) => (
                       <li key={i} className={styles.includedItem}>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className={styles.checkIcon}><polyline points="20 6 9 17 4 12" /></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FE6604" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className={styles.checkIcon}><polyline points="20 6 9 17 4 12" /></svg>
                         {item}
                       </li>
                     ))}
@@ -137,7 +129,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

@@ -3,104 +3,30 @@
   background-color: #ffffff;
   display: flex;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
 }
 
 .container {
-  width: 90%;
-  max-width: 1300px;
+  width: 94%;
+  max-width: none;
+  display: flex;
+  justify-content: center;
 }
 
-.glassCard {
-  background: rgba(17, 24, 39, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.aboutCard {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1300px;
   border-radius: 60px;
   padding: 5rem;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-/* Subtle background glowing effect */
-.glassCard::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.contentGrid {
+.aboutGrid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr 1fr;
   gap: 6rem;
   align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-.textSide {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.badge {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-}
-
-.heading {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
-
-.bodyText {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.bodyText p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.cta {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition: all 0.3s ease;
-  width: fit-content;
-}
-
-.cta span {
-  transition: transform 0.3s ease;
-}
-
-.cta:hover {
-  opacity: 0.8;
-}
-
-.cta:hover span {
-  transform: translateX(8px);
 }
 
 .imageSide {
@@ -111,31 +37,28 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 520px;
   aspect-ratio: 0.85;
 }
 
 .profileBox {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: #f3f4f6;
   border-radius: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
 }
 
-.imageOverlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent);
+.profileImg {
+  object-fit: cover;
 }
 
 .experienceBadge {
   position: absolute;
   bottom: 2rem;
   right: -1rem;
-  background: #ffffff;
+  background: #1E1E1E;
   padding: 1.25rem 2rem;
   border-radius: 24px;
   display: flex;
@@ -147,40 +70,161 @@
 .expNum {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #111827;
+  color: #FE6604;
   line-height: 1;
 }
 
 .expLabel {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #6b7280;
+  color: #ffffff;
   text-transform: uppercase;
   line-height: 1.2;
 }
 
+.textSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.heading {
+  margin: 0;
+}
+
+.hiText {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: #FE6604;
+}
+
+.bodyText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.bodyText p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+.keyPoints {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.keyTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+.pointList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.pointList li {
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pointList li::before {
+  content: '•';
+  color: #FE6604;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 @media (max-width: 1100px) {
-  .contentGrid {
+  .aboutGrid {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
   
-  .glassCard {
-    padding: 3.5rem;
-  }
-  
   .imageSide {
     justify-content: center;
+    order: -1; /* Image on top on mobile/tablet */
+  }
+  
+  .aboutCard {
+    padding: 3.5rem;
+    border-radius: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .glassCard {
-    border-radius: 40px;
-    padding: 2.5rem;
+  .aboutSection {
+    padding: 3rem 0;
   }
   
-  .heading {
-    font-size: 2rem;
+  .aboutCard {
+    padding: 2.5rem 1.5rem;
+    border-radius: 32px;
+  }
+
+  .aboutGrid {
+    gap: 3rem;
+  }
+
+  .imageWrapper {
+    max-width: 320px; /* Smaller on mobile */
+  }
+
+  .profileBox {
+    border-radius: 24px;
+  }
+
+  .textSide {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hiText {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .bodyText p {
+    text-align: center;
+  }
+
+  .keyPoints {
+    align-items: center;
+    width: 100%;
+  }
+
+  .pointList {
+    grid-template-columns: 1fr;
+    text-align: left;
+    width: fit-content;
+  }
+
+  .pointList li {
+    font-size: 0.75rem;
   }
 }

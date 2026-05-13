@@ -1,8 +1,8 @@
 .navbar {
   position: fixed;
   top: 1.5rem;
-  left: 5%;
-  right: 5%;
+  left: 3%;
+  right: 3%;
   z-index: 1000;
   display: flex;
   justify-content: space-between;

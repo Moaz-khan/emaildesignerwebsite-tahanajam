@@ -5,26 +5,19 @@ const Contact = () => {
   return (
     <section className={styles.contactSection}>
       <div className={styles.container}>
-        <div className={styles.glassCard}>
+        <div className={styles.contactCard}>
           <div className={styles.content}>
-            <h2 className={styles.heading}>Ready to take your email design seriously?</h2>
-            <p className={styles.bodyText}>
-              Whether you need one template or a complete email design system, let's talk about what 
-              your brand needs. I'm currently taking on new projects.
+            <h2 className={styles.heading}>Want to see what your next email could look like?</h2>
+            <p className={styles.subtext}>
+              Send me your brand, website, or current email, and I'll create a free sample email design 
+              concept to show how I can improve the layout, hierarchy, and overall look.
             </p>
             
-            <div className={styles.ctaContainer}>
-              <a href="https://calendly.com" className={styles.primaryCta}>
-                Book a Free 30-Min Call
-              </a>
-              <a href="mailto:hello@tahanajam.co" className={styles.secondaryCta}>
-                Email Me Directly — hello@tahanajam.co
+            <div className={styles.ctaWrapper}>
+              <a href="mailto:hello@tahanajam.co" className={styles.claimButton}>
+                CLAIM FREE SAMPLE EMAIL
               </a>
             </div>
-            
-            <p className={styles.note}>
-              Response within 24 hours · Based in Pakistan (GMT+5) · Working with UK & US brands
-            </p>
           </div>
         </div>
       </div>

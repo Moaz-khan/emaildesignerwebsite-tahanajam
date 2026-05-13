@@ -31,109 +31,52 @@ const Hero = () => {
       <div className={styles.container}>
         {/* Left Column: Heading and CTAs */}
         <div className={styles.leftCol}>
+          <div className={styles.logoWrapper}>
+            <Image 
+              src="/assets/logo.png" 
+              alt="Taha Najam Logo" 
+              width={150} 
+              height={40}
+              style={{ height: 'auto', width: '150px' }}
+              className={styles.logo}
+              priority
+            />
+          </div>
+          <div className={styles.statusBadge}>
+            <span className={styles.dot}></span>
+            Available for new projects
+          </div>
           <h1 className={styles.heading}>
-            Emails That Look Premium.<br />
-            Flows That Convert.
+            Emails that look <span className={styles.highlight}>premium.</span> Flows that <span className={styles.highlight}>convert.</span>
           </h1>
-          
+
+          <p className={styles.subheading}>
+            High-quality email design, Klaviyo flows, and email design systems for ecommerce and DTC brands
+            that want every send to look on-brand, feel intentional, and drive action.
+          </p>
+
           <div className={styles.ctaContainer}>
-            <Link href="/work" className={styles.primaryCta}>See My Work</Link>
-            <Link href="/contact" className={styles.secondaryCta}>Book a Free Call</Link>
+            <Link href="/contact" className={styles.btnBlack}>Book a call</Link>
+            <Link href="/sample" className={styles.btnOrange}>Get a free email sample</Link>
           </div>
 
-          <div className={styles.achievements}>
-            <div className={styles.achievementItem}>
-              {/* @ts-ignore */}
-              <lord-icon
-                  src="https://cdn.lordicon.com/vqhlecvy.json"
-                  trigger="in"
-                  delay="1500"
-                  state="in-reveal"
-                  colors="primary:#111827,secondary:#111827"
-                  style={{ width: '45px', height: '45px' }}>
-              </lord-icon>
-              <span className={styles.achNum}>50+</span>
-              <span className={styles.achLabel}>Satisfied<br />Clients</span>
-            </div>
-            <div className={styles.achievementItem}>
-              {/* @ts-ignore */}
-              <lord-icon
-                  src="https://cdn.lordicon.com/euaablbm.json"
-                  trigger="loop"
-                  state="loop-cycle"
-                  colors="primary:#111827,secondary:#111827"
-                  style={{ width: '45px', height: '45px' }}>
-              </lord-icon>
-              <span className={styles.achNum}>100+</span>
-              <span className={styles.achLabel}>Email Flows<br />Optimized</span>
-            </div>
-            <div className={styles.achievementItem}>
-              {/* @ts-ignore */}
-              <lord-icon
-                  src="https://cdn.lordicon.com/cvwrvyjv.json"
-                  trigger="in"
-                  delay="1500"
-                  state="in-dynamic"
-                  colors="primary:#111827,secondary:#111827"
-                  style={{ width: '45px', height: '45px' }}>
-              </lord-icon>
-              <span className={styles.achNum}>5 yrs</span>
-              <span className={styles.achLabel}>Specialist<br />Experience</span>
-            </div>
+          <div className={styles.trustBar}>
+            Upwork Top Rated Talent · Klaviyo Partner · 7+ Years Design Experience · Email Design Specialist
           </div>
         </div>
 
-        {/* Right Column: Subheading and Slider */}
+        {/* Right Column: Hero Image */}
         <div className={styles.rightCol}>
-          <div className={styles.subheadingContainer}>
-            <div className={styles.statusBadge}>
-              <span className={styles.dot}></span>
-              Currently available for new projects
-            </div>
-            <p className={styles.subheading}>
-              I'm Taha, a senior email designer with 5 years of specialist experience. 
-              I design top-notch email templates, flows, and scalable email design systems 
-              for DTC and B2B brands.
-            </p>
-          </div>
-
-          <div className={styles.cardSliderContainer}>
-            <div className={styles.cardsWrapper}>
-              <AnimatePresence mode="popLayout">
-                {cards.map((card, i) => {
-                  let relativeIndex = (i - index + cards.length) % cards.length;
-                  if (relativeIndex > 3) return null;
-
-                  return (
-                    <motion.div
-                      key={card.id}
-                      className={styles.card}
-                      initial={{ scale: 0.8, opacity: 0, y: 50 }}
-                      animate={{
-                        scale: 1 - relativeIndex * 0.05,
-                        y: relativeIndex * -20,
-                        x: relativeIndex * 15,
-                        zIndex: cards.length - relativeIndex,
-                        opacity: 1 - relativeIndex * 0.25,
-                        rotate: relativeIndex * 2,
-                      }}
-                      exit={{ x: -200, opacity: 0, rotate: -20 }}
-                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                    >
-                      <div className={styles.cardImage}>
-                        <Image 
-                          src={card.image} 
-                          alt={card.title}
-                          fill
-                          className={styles.img}
-                          priority={i === index}
-                        />
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </AnimatePresence>
-            </div>
+          <div className={styles.heroImgWrapper}>
+            <Image
+              src="/figma-design/hero-rightside.png"
+              alt="Hero Showcase"
+              fill
+              priority
+              quality={80}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={styles.heroImg}
+            />
           </div>
         </div>
       </div>

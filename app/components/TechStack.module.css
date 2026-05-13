@@ -1,0 +1,98 @@
+.techStack {
+  padding: 6rem 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  width: 94%;
+  max-width: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.heading {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 400;
+  color: #1E1E1E;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 6rem;
+  animation: scroll 40s linear infinite;
+  align-items: center;
+}
+
+.logoItem {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.logoItem:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.logoImg {
+  object-fit: contain;
+  max-height: 40px;
+  width: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .techStack {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    gap: 2rem;
+  }
+
+  .track {
+    gap: 3.5rem;
+    animation: scroll 25s linear infinite; /* Faster scroll on mobile */
+  }
+  
+  .logoImg {
+    max-height: 30px;
+  }
+
+  .heading {
+    padding: 0 1.5rem;
+  }
+}

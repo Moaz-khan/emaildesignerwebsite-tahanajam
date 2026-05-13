@@ -7,39 +7,54 @@ const About = () => {
   return (
     <section className={styles.aboutSection}>
       <div className={styles.container}>
-        <div className={styles.glassCard}>
-          <div className={styles.contentGrid}>
+        <div className={styles.aboutCard}>
+          <div className={styles.aboutGrid}>
+            {/* Left Side: Text Content */}
             <div className={styles.textSide}>
-              <span className={styles.badge}>Who I am</span>
               <h2 className={styles.heading}>
-                A designer who specialises in one thing — and does it at the highest level.
+                <span className={styles.hiText}>Hi,</span>
               </h2>
+              
               <div className={styles.bodyText}>
                 <p>
-                  I'm Taha Najam, a senior email designer based in Pakistan, working with brands across 
-                  the UK, US, and UAE. I've spent 4 years focused exclusively on email design — and 7 years in 
-                  graphic design before that.
+                  I’m Taha, a Senior Email Designer and Klaviyo-focused design consultant with 7+ years of 
+                  design experience and 5 years focused on email design for ecommerce and DTC brands.
                 </p>
                 <p>
-                  I work directly in Klaviyo, Figma, and Mailchimp, so there's no long handoff process or 
-                  miscommunication. You get a designer who understands your brand, your platform, and your 
-                  inbox.
+                  I hold a Master’s degree in Graphic Arts from the University of the West of England, 
+                  and I’m also an Upwork Top Rated Talent. My work combines strong visual design, clean 
+                  structure, brand consistency, and practical Klaviyo implementation.
+                </p>
+                <p>
+                  I help brands improve how their emails look, read, and perform, from one-off campaign 
+                  emails to complete Klaviyo flows and reusable email design systems. My focus is simple: 
+                  premium design, clear hierarchy, mobile-first layouts, and emails that are ready to send.
                 </p>
               </div>
-              <Link href="/about" className={styles.cta}>
-                Read my full story <span>→</span>
-              </Link>
+
+              <div className={styles.keyPoints}>
+                <h3 className={styles.keyTitle}>Key points:</h3>
+                <ul className={styles.pointList}>
+                  <li>7+ years of design experience</li>
+                  <li>5 years focused on email design</li>
+                  <li>High-quality campaign email design</li>
+                  <li>Klaviyo flow design and build</li>
+                  <li>Conversion-focused email structure</li>
+                  <li>Figma design to Klaviyo implementation</li>
+                </ul>
+              </div>
             </div>
-            
+
+            {/* Right Side: Image */}
             <div className={styles.imageSide}>
               <div className={styles.imageWrapper}>
                 <div className={styles.profileBox}>
-                  {/* Placeholder for Taha's photo - using a stylish professional shot */}
-                  <div className={styles.imageOverlay}></div>
-                  <div className={styles.experienceBadge}>
-                    <span className={styles.expNum}>11</span>
-                    <span className={styles.expLabel}>Years<br/>Exp.</span>
-                  </div>
+                  <Image 
+                    src="/assets/tahanajam.png" 
+                    alt="Taha - Senior Email Designer" 
+                    fill
+                    className={styles.profileImg}
+                  />
                 </div>
               </div>
             </div>

@@ -3,7 +3,6 @@ import LogoBanner from './components/LogoBanner';
 import Services from './components/Services';
 import About from './components/About';
 import Work from './components/Work';
-import WhyChooseMe from './components/WhyChooseMe';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import { Metadata } from 'next';
@@ -17,14 +16,13 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <main className="flex-1">
-        <Hero />
+        <div id="hero"><Hero /></div>
         <LogoBanner />
-        <Services />
-        <About />
-        <Work />
-        <WhyChooseMe />
-        <Testimonials />
-        <Contact />
+        <div id="services"><Services /></div>
+        <div id="work"><Work /></div>
+        <div id="about"><About /></div>
+        <div id="testimonials"><Testimonials /></div>
+        <div id="contact"><Contact /></div>
       </main>
     </div>
   );
