@@ -50,14 +50,7 @@ const Footer = () => {
                 </nav>
               </div>
 
-              <div className={styles.linksColumn}>
-                <h4 className={styles.columnTitle}>Contact</h4>
-                <nav className={styles.footerNav}>
-                  <a href="mailto:hello@tahanajam.co">hello@tahanajam.co</a>
-                  <a href="tel:+447428698718">+44 7428 698718</a>
-                  <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer">Schedule a Call</a>
-                </nav>
-              </div>
+
               <div className={styles.linksColumn}>
                 <h4 className={styles.columnTitle}>Profile</h4>
                 <nav className={styles.footerNav}>
@@ -69,14 +62,13 @@ const Footer = () => {
 
             {/* Right Side: CTA Buttons */}
             <div className={styles.footerCtaSide}>
-              <h4 className={styles.columnTitle}>Next Steps</h4>
-              <p className={styles.ctaDesc}>Ready to transform your email marketing?</p>
+              <div className={styles.footerContactInfo}>
+                <a href="mailto:hello@tahanajam.co" className={styles.contactLink}>hello@tahanajam.co</a>
+                <a href="tel:+447428698718" className={styles.contactLink}>+44 7428 698718</a>
+              </div>
               <div className={styles.footerCtaButtons}>
                 <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnBlack}>
                   Book a Call
-                </a>
-                <a href="mailto:hello@tahanajam.co" className={styles.btnOrange}>
-                  Get Free Sample
                 </a>
               </div>
             </div>

@@ -21,13 +21,14 @@
 }
 
 .mainContent {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 4rem;
+  display: flex;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 4rem;
 }
 
 .brandSide {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -70,8 +71,9 @@
 }
 
 .navSide {
+  flex: 1;
   display: flex;
-  gap: 2.8rem;
+  gap: 4rem;
   justify-content: center;
 }
 
@@ -79,6 +81,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
+  text-align: center;
 }
 
 .columnTitle {
@@ -108,34 +112,57 @@
 }
 
 .footerCtaSide {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  align-items: flex-end;
+  padding-top: 2.35rem; /* Align with other columns content start */
 }
 
-.ctaDesc {
-  font-size: 0.85rem;
-  color: #6b7280;
-  line-height: 1.5;
+.footerContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+}
+
+.contactLink {
+  color: #1E1E1E;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #FE6604;
 }
 
 .footerCtaButtons {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 100%;
+  width: fit-content;
+  margin-top: 1rem;
+  align-items: center;
+  text-align: center;
 }
 
 .btnBlack {
   background: #1E1E1E;
   color: #ffffff;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 3rem;
   border-radius: 100px;
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-weight: 700;
+  font-size: 1.05rem;
   text-decoration: none;
   transition: all 0.3s ease;
   text-align: center;
+  width: fit-content;
+  min-width: 260px;
 }
 
 .btnBlack:hover {
@@ -171,12 +198,18 @@
 
 @media (max-width: 1100px) {
   .mainContent {
-    grid-template-columns: 1.5fr 1fr;
+    flex-wrap: wrap;
     gap: 3rem;
   }
+  .brandSide, .navSide, .footerCtaSide {
+    flex: 1 1 300px;
+  }
   .footerCtaSide {
-    grid-column: span 2;
-    margin-top: 2rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footerContactInfo, .footerCtaButtons {
+    align-items: flex-start;
   }
 }
 
@@ -187,9 +220,10 @@
   }
 
   .mainContent {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 3.5rem;
     text-align: center;
+    align-items: center;
   }
 
   .brandSide {
@@ -219,9 +253,14 @@
   }
 
   .footerCtaSide {
-    grid-column: span 1;
     align-items: center;
+    text-align: center;
     width: 100%;
+    padding-top: 0;
+  }
+
+  .footerContactInfo, .footerCtaButtons {
+    align-items: center;
   }
 
   .footerCtaButtons {
