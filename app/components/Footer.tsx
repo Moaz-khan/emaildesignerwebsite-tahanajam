@@ -16,8 +16,8 @@ const Footer = () => {
                 <Image
                   src="/assets/logo2.png"
                   alt="Taha Najam Logo"
-                  width={120}
-                  height={32}
+                  width={80}
+                  height={60}
                   className={styles.footerLogo}
                 />
               </div>
@@ -43,10 +43,10 @@ const Footer = () => {
               <div className={styles.linksColumn}>
                 <h4 className={styles.columnTitle}>Navigation</h4>
                 <nav className={styles.footerNav}>
-                  <Link href="/">Home</Link>
-                  <Link href="/services">Services</Link>
-                  <Link href="/work">Work</Link>
-                  <Link href="/about">About</Link>
+                  <Link href="/#hero">Home</Link>
+                  <Link href="/#services">Services</Link>
+                  <Link href="/#work">Work</Link>
+                  <Link href="/#about">About</Link>
                 </nav>
               </div>
               <div className={styles.linksColumn}>
