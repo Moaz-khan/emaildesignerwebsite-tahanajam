@@ -49,13 +49,7 @@ const Footer = () => {
                   <Link href="/#about">About</Link>
                 </nav>
               </div>
-              <div className={styles.linksColumn}>
-                <h4 className={styles.columnTitle}>Legal</h4>
-                <nav className={styles.footerNav}>
-                  <Link href="/terms">Terms & Conditions</Link>
-                  <Link href="/privacy">Privacy Policy</Link>
-                </nav>
-              </div>
+
               <div className={styles.linksColumn}>
                 <h4 className={styles.columnTitle}>Contact</h4>
                 <nav className={styles.footerNav}>
@@ -81,7 +75,7 @@ const Footer = () => {
                 <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnBlack}>
                   Book a Call
                 </a>
-                <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnOrange}>
+                <a href="mailto:hello@tahanajam.co" className={styles.btnOrange}>
                   Get Free Sample
                 </a>
               </div>

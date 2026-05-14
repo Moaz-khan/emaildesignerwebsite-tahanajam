@@ -37,15 +37,15 @@ const LogoBanner = () => {
     <section className={styles.bannerSection}>
       <div className={styles.container}>
         <h2 className={styles.heading}>
-          <span className={styles.italic}>Tool I work in</span>
+          <span className={styles.italic}>Tools I work in</span>
         </h2>
-        
-        <div 
+
+        <div
           ref={containerRef}
           className={styles.marqueeContainer}
           data-animated={start}
         >
-          <div 
+          <div
             ref={scrollerRef}
             className={`${styles.marqueeContent} ${start ? styles.animate : ''}`}
           >

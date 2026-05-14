@@ -43,7 +43,7 @@ const WorkPage = () => {
             <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnBlack}>
               Book a Free Call
             </a>
-            <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnOrange}>
+            <a href="mailto:hello@tahanajam.co" className={styles.btnOrange}>
               Claim Free Sample Email
             </a>
           </div>

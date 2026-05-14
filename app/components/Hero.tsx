@@ -26,7 +26,7 @@ const Hero = () => {
 
           <div className={styles.ctaContainer}>
             <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnBlack}>Book a call</a>
-            <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnOrange}>Get a free email sample</a>
+            <a href="mailto:hello@tahanajam.co" className={styles.btnOrange}>Get a free email sample</a>
           </div>
 
           <div className={styles.trustBar}>
