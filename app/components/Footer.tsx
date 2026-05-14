@@ -38,29 +38,22 @@ const Footer = () => {
 
             </div>
 
-            {/* Center: Navigation */}
+            {/* Center: Navigation & Profile Links */}
             <div className={styles.navSide}>
               <div className={styles.linksColumn}>
-                <h4 className={styles.columnTitle}>Navigation</h4>
-                <nav className={styles.footerNav}>
-                  <Link href="/#hero">Home</Link>
-                  <Link href="/#services">Services</Link>
-                  <Link href="/#work">Work</Link>
-                  <Link href="/#about">About</Link>
-                </nav>
+                <Link href="/#hero">Home</Link>
+                <Link href="/#services">Services</Link>
+                <Link href="/#work">Work</Link>
+                <Link href="/#about">About</Link>
               </div>
 
-
               <div className={styles.linksColumn}>
-                <h4 className={styles.columnTitle}>Profile</h4>
-                <nav className={styles.footerNav}>
-                  <a href="https://www.linkedin.com/in/taha-najam-designer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  <a href="https://www.upwork.com/freelancers/~0107279814f3ae2127" target="_blank" rel="noopener noreferrer">Upwork</a>
-                </nav>
+                <a href="https://www.linkedin.com/in/taha-najam-designer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.upwork.com/freelancers/~0107279814f3ae2127" target="_blank" rel="noopener noreferrer">Upwork</a>
               </div>
             </div>
 
-            {/* Right Side: CTA Buttons */}
+            {/* Right Side: Contact Info & CTA */}
             <div className={styles.footerCtaSide}>
               <div className={styles.footerContactInfo}>
                 <a href="mailto:hello@tahanajam.co" className={styles.contactLink}>hello@tahanajam.co</a>
