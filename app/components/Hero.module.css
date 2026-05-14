@@ -31,13 +31,7 @@
   align-self: center;
 }
 
-.logoWrapper {
-  margin-bottom: 0.5rem;
-}
 
-.logo {
-  object-fit: contain;
-}
 
 .rightCol {
   flex: 1.2;
@@ -246,21 +240,14 @@
     align-items: center;
     color: #1E1E1E;
     width: 100%;
-    padding: 0 1rem;
-  }
-
-  .logoWrapper {
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    padding: 2rem 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
+    min-height: 100%;
   }
 
-  .logo {
-    width: 110px !important;
-    height: auto !important;
-  }
+
 
   .heading {
     color: #1E1E1E;

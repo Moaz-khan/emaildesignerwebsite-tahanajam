@@ -91,7 +91,7 @@ export const InfiniteMovingImages = ({
         {images.map((item, idx) => (
           <li
             key={idx}
-            className="relative h-[300px] md:h-[450px] shrink-0 overflow-hidden group transition-all duration-500"
+            className="relative h-[400px] md:h-[600px] shrink-0 overflow-hidden group transition-all duration-500"
           >
             <img
               src={item.src}

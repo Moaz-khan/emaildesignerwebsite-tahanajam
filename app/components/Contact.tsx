@@ -14,7 +14,7 @@ const Contact = () => {
             </p>
             
             <div className={styles.ctaWrapper}>
-              <a href="mailto:hello@tahanajam.co" className={styles.claimButton}>
+              <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.claimButton}>
                 CLAIM FREE SAMPLE EMAIL
               </a>
             </div>

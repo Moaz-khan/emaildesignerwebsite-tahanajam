@@ -60,7 +60,7 @@ const Services = () => {
         {/* Left Side: Header & Nav */}
         <div className={styles.leftCol}>
           <div className={styles.header}>
-            <span className={styles.badge}>What I do</span>
+
             <h2 className={styles.title}>
               <span className={styles.premium}>One service.</span><br />
               Done better than anyone else.

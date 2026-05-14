@@ -3,16 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { Home, Briefcase, User, MessageSquare, Star } from 'lucide-react';
 import styles from './FloatingNavbar.module.css';
 
 const navItems = [
-  { id: 'hero', label: 'Home', icon: <Home size={20} /> },
-  { id: 'services', label: 'Services', icon: <Briefcase size={20} /> },
-  { id: 'work', label: 'Work', icon: <Briefcase size={20} /> },
-  { id: 'about', label: 'About', icon: <User size={20} /> },
-  { id: 'testimonials', label: 'Reviews', icon: <Star size={20} /> },
-  { id: 'contact', label: 'Contact', icon: <MessageSquare size={20} /> },
+  { id: 'hero', label: 'Home' },
+  { id: 'services', label: 'Services' },
+  { id: 'work', label: 'Work' },
+  { id: 'about', label: 'About' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 const FloatingNavbar = () => {
@@ -55,7 +53,6 @@ const FloatingNavbar = () => {
               className={`${styles.navItem} ${activeSection === item.id ? styles.active : ''}`}
               scroll={true}
             >
-              <span className={styles.icon}>{item.icon}</span>
               <span className={styles.label}>{item.label}</span>
               {activeSection === item.id && (
                 <motion.div

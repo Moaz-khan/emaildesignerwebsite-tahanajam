@@ -1,3 +1,5 @@
+"use client";
+import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import styles from './LogoBanner.module.css';
 
@@ -12,6 +14,25 @@ const toolLogos = [
 ];
 
 const LogoBanner = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [start, setStart] = useState(false);
+
+  useEffect(() => {
+    if (containerRef.current && scrollerRef.current) {
+      const scrollerContent = Array.from(scrollerRef.current.children);
+
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        if (scrollerRef.current) {
+          scrollerRef.current.appendChild(duplicatedItem);
+        }
+      });
+
+      setStart(true);
+    }
+  }, []);
+
   return (
     <section className={styles.bannerSection}>
       <div className={styles.container}>
@@ -19,9 +40,16 @@ const LogoBanner = () => {
           <span className={styles.italic}>Tool I work in</span>
         </h2>
         
-        <div className={styles.marqueeContainer}>
-          <div className={styles.marqueeContent}>
-            {[...toolLogos, ...toolLogos].map((logo, i) => (
+        <div 
+          ref={containerRef}
+          className={styles.marqueeContainer}
+          data-animated={start}
+        >
+          <div 
+            ref={scrollerRef}
+            className={`${styles.marqueeContent} ${start ? styles.animate : ''}`}
+          >
+            {toolLogos.map((logo, i) => (
               <div key={`${logo.name}-${i}`} className={styles.brandLogo}>
                 <Image
                   src={logo.src}

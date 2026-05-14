@@ -5,7 +5,7 @@ import styles from './Work.module.css';
 import { InfiniteMovingImages } from './InfiniteMovingImages';
 
 const imageNames = [
-  "wrok1.png", "work2.png", "work3.png", "work4.png", "work5.png",
+  "work1.png", "work2.png", "work3.png", "work4.png", "work5.png",
   "work6.png", "work7.png", "work8.png", "work9.png", "work10.png",
   "work11.png", "work12.png", "work13.png", "work14.png", "work15.png"
 ];
@@ -33,7 +33,7 @@ const Work = () => {
       </div>
 
       <div className={styles.imageSection}>
-        <InfiniteMovingImages 
+        <InfiniteMovingImages
           images={workImages}
           direction="left"
           speed="normal"

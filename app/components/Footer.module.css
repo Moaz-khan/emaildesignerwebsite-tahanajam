@@ -22,8 +22,9 @@
 
 .mainContent {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-columns: auto 1fr auto;
   gap: 4rem;
+  align-items: flex-start;
 }
 
 .brandSide {
@@ -34,6 +35,12 @@
 
 .logoWrapper {
   margin-bottom: 0.5rem;
+}
+
+.footerLogo {
+  height: auto;
+  width: auto;
+  max-width: 120px;
 }
 
 .aboutText {
@@ -64,7 +71,8 @@
 
 .navSide {
   display: flex;
-  gap: 4rem;
+  gap: 2.2rem;
+  justify-content: center;
 }
 
 .linksColumn {
@@ -99,55 +107,59 @@
   padding-left: 4px;
 }
 
-.newsletterSide {
+.footerCtaSide {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.newsletterDesc {
+.ctaDesc {
   font-size: 0.85rem;
   color: #6b7280;
   line-height: 1.5;
 }
 
-.inputWrapper {
+.footerCtaButtons {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  width: 100%;
 }
 
-.newsletterInput {
-  background: #ffffff;
-  border: 1px solid #d1d5db;
-  padding: 0.9rem 1.25rem;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  outline: none;
+.btnBlack {
+  background: #1E1E1E;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
-.newsletterInput:focus {
-  border-color: #FE6604;
-  box-shadow: 0 0 0 4px rgba(254, 102, 4, 0.1);
+.btnBlack:hover {
+  background: #000000;
+  transform: translateY(-2px);
 }
 
-.submitBtn {
+.btnOrange {
   background: #FE6604;
   color: #ffffff;
-  padding: 1rem;
-  border-radius: 12px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  box-shadow: 0 4px 14px rgba(254, 102, 4, 0.3);
+  text-align: center;
 }
 
-.submitBtn:hover {
+.btnOrange:hover {
   background: #e55a00;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(254, 102, 4, 0.4);
 }
 
 .copyright {
@@ -162,7 +174,7 @@
     grid-template-columns: 1.5fr 1fr;
     gap: 3rem;
   }
-  .newsletterSide {
+  .footerCtaSide {
     grid-column: span 2;
     margin-top: 2rem;
   }
@@ -184,6 +196,10 @@
     align-items: center;
   }
 
+  .footerLogo {
+    max-width: 100px;
+  }
+
   .aboutText {
     text-align: center;
   }
@@ -202,17 +218,14 @@
     align-items: center;
   }
 
-  .newsletterSide {
+  .footerCtaSide {
     grid-column: span 1;
     align-items: center;
-  }
-
-  .newsletterDesc {
-    text-align: center;
-  }
-
-  .inputWrapper {
     width: 100%;
-    max-width: 400px;
+  }
+
+  .footerCtaButtons {
+    width: 100%;
+    max-width: 300px;
   }
 }

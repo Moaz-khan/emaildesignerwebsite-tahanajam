@@ -1,47 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Hero.module.css';
 
-const cards = [
-  { id: 1, image: '/assets/hero1.png', title: 'Premium Design 1' },
-  { id: 2, image: '/assets/hero2.png', title: 'Flow Strategy 2' },
-  { id: 3, image: '/assets/hero3.png', title: 'Design System 3' },
-  { id: 4, image: '/assets/hero4.png', title: 'DTC Mastery 4' },
-  { id: 5, image: '/assets/hero5.png', title: 'B2B Growth 5' },
-];
-
 const Hero = () => {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % cards.length);
-    }, 4000); // Change card every 4 seconds
-
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
         {/* Left Column: Heading and CTAs */}
         <div className={styles.leftCol}>
-          <div className={styles.logoWrapper}>
-            <Image 
-              src="/assets/logo.png" 
-              alt="Taha Najam Logo" 
-              width={150} 
-              height={40}
-              style={{ height: 'auto', width: '150px' }}
-              className={styles.logo}
-              priority
-            />
-          </div>
           <div className={styles.statusBadge}>
             <span className={styles.dot}></span>
             Available for new projects
@@ -56,8 +25,8 @@ const Hero = () => {
           </p>
 
           <div className={styles.ctaContainer}>
-            <Link href="/contact" className={styles.btnBlack}>Book a call</Link>
-            <Link href="/sample" className={styles.btnOrange}>Get a free email sample</Link>
+            <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnBlack}>Book a call</a>
+            <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnOrange}>Get a free email sample</a>
           </div>
 
           <div className={styles.trustBar}>

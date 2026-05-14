@@ -40,12 +40,12 @@ const WorkPage = () => {
           </div>
           
           <div className={styles.ctaGroup}>
-            <Link href="#contact" className={styles.btnBlack}>
+            <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnBlack}>
               Book a Free Call
-            </Link>
-            <Link href="#contact" className={styles.btnOrange}>
+            </a>
+            <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.btnOrange}>
               Claim Free Sample Email
-            </Link>
+            </a>
           </div>
         </div>
       </section>

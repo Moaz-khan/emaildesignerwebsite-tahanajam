@@ -29,9 +29,9 @@ const Navbar = () => {
         <Link href="/blog" className={styles.link}>Blog</Link>
       </div>
 
-      <Link href="/contact" className={styles.cta}>
+      <a href="https://calendly.com/hello-tahanajam/30min" target="_blank" rel="noopener noreferrer" className={styles.cta}>
         Book a Call
-      </Link>
+      </a>
     </nav>
   );
 };
